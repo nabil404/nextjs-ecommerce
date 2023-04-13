@@ -1,5 +1,6 @@
 import { styled } from "@mui/material";
 
+// shouldForwardProp: prop => !prop.toString().startsWith('$'),
 export const Desktop = styled('div')`
   @media (max-width: 768px) {
     display: none !important;
