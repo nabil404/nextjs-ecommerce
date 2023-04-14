@@ -6,8 +6,16 @@ import {
 } from "@/components/Layout/SiteHeader/SiteHeaderNav/elements";
 import {FavoriteBorder, ShoppingCart, Person2Outlined} from "@mui/icons-material";
 import {Container, Typography, Grid} from "@mui/material";
+import {useAppDispatch} from "@/store";
+import {setCartStateAction} from "@/store/features/layout/slice";
 
 function SiteHeaderNav() {
+  const dispatch = useAppDispatch()
+
+  const cartClickHandler = () => {
+    dispatch(setCartStateAction(true))
+  }
+
   return (
     <StyledAppbar position="static">
       <Container>
@@ -22,7 +30,7 @@ function SiteHeaderNav() {
                 <FavoriteBorder/>
               </StyledBadge>
             </StyledIconButton>
-            <StyledIconButton size="large">
+            <StyledIconButton size="large" onClick={cartClickHandler}>
               <StyledBadge badgeContent={4}>
                 <ShoppingCart/>
               </StyledBadge>

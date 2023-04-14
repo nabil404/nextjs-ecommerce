@@ -3,7 +3,8 @@ import {LayoutState} from './types'
 
 const initialState: LayoutState = {
   isSidebarOpen: false,
-  isCartOpen: false
+  isCartOpen: false,
+  isSearchOpen: false
 }
 
 export const layoutSlice = createSlice({
@@ -12,14 +13,19 @@ export const layoutSlice = createSlice({
   reducers: {
     setSidebarState(state, {payload}: PayloadAction<boolean>) {
       state.isSidebarOpen = payload
-      state.isCartOpen = !payload
     },
     setCartState(state, {payload}: PayloadAction<boolean>) {
       state.isCartOpen = payload
-      state.isSidebarOpen = !payload
+    },
+    setSearchState(state, {payload}: PayloadAction<boolean>) {
+      state.isSearchOpen = payload
     },
   },
 })
 
-export const {setSidebarState: setSidebarStateAction, setCartState: setCartStateAction} = layoutSlice.actions
+export const {
+  setSidebarState: setSidebarStateAction,
+  setCartState: setCartStateAction,
+  setSearchState: setSearchStateAction
+} = layoutSlice.actions
 export const {reducer: layoutReducer} = layoutSlice

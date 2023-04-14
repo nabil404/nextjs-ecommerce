@@ -2,7 +2,7 @@ import {Typography, Badge} from "@mui/material";
 import {StyledAppbar, StyledBadge, StyledIconButton, StyledToolbar} from "@/components/Layout/MobileTopbar/elements";
 import {Menu, ShoppingCart, Search} from '@mui/icons-material'
 import {useAppDispatch} from "@/store";
-import {setCartStateAction, setSidebarStateAction} from "@/store/features/layout/slice";
+import {setCartStateAction, setSearchStateAction, setSidebarStateAction} from "@/store/features/layout/slice";
 
 function MobileTopbar() {
   const dispatch = useAppDispatch()
@@ -14,6 +14,10 @@ function MobileTopbar() {
     dispatch(setCartStateAction(true))
   }
 
+  const searchButtonClickHandler = () => {
+    dispatch(setSearchStateAction(true))
+  }
+
   return (
     <StyledAppbar position="static">
       <StyledToolbar>
@@ -23,7 +27,7 @@ function MobileTopbar() {
         <Typography variant="h6" component="div" sx={{flexGrow: 1}}>
           Shop
         </Typography>
-        <StyledIconButton size="large">
+        <StyledIconButton size="large" onClick={searchButtonClickHandler}>
           <Search/>
         </StyledIconButton>
         <StyledIconButton size="large" onClick={cartButtonClickHandler}>
