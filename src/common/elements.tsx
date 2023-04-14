@@ -1,4 +1,5 @@
-import { styled } from "@mui/material";
+import {styled, TextField} from "@mui/material";
+import {brown} from "@mui/material/colors";
 
 // shouldForwardProp: prop => !prop.toString().startsWith('$'),
 export const Desktop = styled('div')`
@@ -11,3 +12,17 @@ export const Mobile = styled('div')`
     display: none !important;
   }
 `;
+
+export const StyledTextField = styled(TextField)`
+  && {
+    .Mui-focused {
+      fieldset {
+        border-color: ${brown[400]};
+      }
+    }
+
+    input {
+      height: 1rem;
+    }
+  }
+`
