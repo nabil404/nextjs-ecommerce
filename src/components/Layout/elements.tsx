@@ -11,4 +11,5 @@ export const StyledDrawer = styled(Drawer)`
 
 export const DrawerContainer = styled(Grid)`
   position: relative;
+  padding: 10px 20px;
 `

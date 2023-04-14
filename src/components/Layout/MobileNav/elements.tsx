@@ -4,9 +4,8 @@ import {green, blue} from "@mui/material/colors";
 export const StyledIconButton = styled(IconButton)`
   && {
     position: absolute;
-    right: 10px;
-    top: 10px;
-
+    right: 20px;
+    top: 20px;
     .MuiSvgIcon-root {
       font-size: 25px;
     }
@@ -15,10 +14,10 @@ export const StyledIconButton = styled(IconButton)`
 
 export const AuthButtonContainer = styled(Grid)`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 0 4rem;
-  margin-top: 10px;
+  padding: 0 1rem;
+  margin-top: 5rem;
 `
 
 export const StyledLoginButton = styled(Button)`
@@ -42,5 +41,5 @@ export const StyledRegisterButton = styled(Button)`
 `
 
 export const NavigationContainer = styled(Grid)`
-  //padding: 0 1rem;
+  margin-top: 2rem;
 `

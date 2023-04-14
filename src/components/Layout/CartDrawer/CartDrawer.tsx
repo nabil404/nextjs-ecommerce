@@ -20,6 +20,7 @@ function CartDrawer() {
         <StyledIconButton onClick={closeButtonClickHandler}>
           <Close/>
         </StyledIconButton>
+
       </DrawerContainer>
     </StyledDrawer>
   );
