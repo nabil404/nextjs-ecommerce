@@ -25,7 +25,7 @@ export const StyledListItemIcon = styled(ListItemIcon, {
       font-weight: bold;
       fill: ${({$isOpen, theme}) =>
               $isOpen ? theme.palette.grey[800] : theme.palette.grey[600]};
-      font-size: 16px;
+      font-size: 1.75rem;
     }
   }
 `
