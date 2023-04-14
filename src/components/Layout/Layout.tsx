@@ -1,10 +1,10 @@
 import {PropsWithChildren} from "react";
 import MobileTopbar from "@/components/Layout/MobileTopbar";
-import {Desktop, Mobile} from "@/common/elements";
 import MobileNav from "@/components/Layout/MobileNav";
 import SiteHeader from "@/components/Layout/SiteHeader";
 import CartDrawer from "@/components/Layout/CartDrawer";
 import SearchDrawer from "@/components/Layout/SearchDrawer/SearchDrawer";
+import {Mobile, DesktopOrTablet} from "@/common/Devices";
 
 function Layout({children}: PropsWithChildren) {
   return (
@@ -14,9 +14,9 @@ function Layout({children}: PropsWithChildren) {
         <MobileNav/>
         <SearchDrawer/>
       </Mobile>
-      <Desktop>
+      <DesktopOrTablet>
         <SiteHeader/>
-      </Desktop>
+      </DesktopOrTablet>
       <CartDrawer/>
       <>{children}</>
     </>
