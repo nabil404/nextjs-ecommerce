@@ -1,4 +1,4 @@
-import {useMemo, useState} from "react";
+import {useMemo} from "react";
 import {useSelector} from "react-redux";
 import {Divider} from '@mui/material'
 import {Close} from "@mui/icons-material";
@@ -16,40 +16,7 @@ import {setSidebarStateAction} from "@/store/features/layout/slice";
 import VerticalNavigation from "@/components/VerticalNavigation";
 import {NavigationData} from "@/common/types";
 import {TreeFlattener} from "@/common/utils";
-
-const navData: NavigationData[] = [
-  {
-    id: 'category',
-    title: 'Categories',
-    children: [
-      {
-        id: 'category-1',
-        title: 'Category 1',
-        children: [],
-      },
-      {
-        id: 'category-2',
-        title: 'Category 2',
-        children: [],
-      },
-      {
-        id: 'category-3',
-        title: 'Category 3',
-        children: [],
-      },
-      {
-        id: 'category-4',
-        title: 'Category 4',
-        children: [],
-      }
-    ]
-  },
-  {
-    id: 'about',
-    title: 'About Us',
-    children: []
-  }
-]
+import {navData} from "@/common/__temp__/Navdata";
 
 function MobileNav() {
   const dispatch = useAppDispatch()
