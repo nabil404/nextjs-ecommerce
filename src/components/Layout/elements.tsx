@@ -1,5 +1,6 @@
-import {styled, Drawer, Grid, IconButton} from "@mui/material";
+import {styled, Drawer, Grid} from "@mui/material";
 import {NAVBAR_WIDTH} from "@/common/constants";
+
 export const StyledDrawer = styled(Drawer)`
   && {
     .MuiPaper-root {

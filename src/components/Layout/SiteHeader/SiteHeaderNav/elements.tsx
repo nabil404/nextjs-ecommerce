@@ -1,4 +1,4 @@
-import {AppBar, Badge, Grid, IconButton, styled, Toolbar} from '@mui/material'
+import {AppBar, Badge, IconButton, styled, Toolbar} from '@mui/material'
 import {brown} from "@mui/material/colors";
 import {blue} from "@mui/material/colors";
 import {NAVBAR_HEIGHT} from "@/common/constants";
