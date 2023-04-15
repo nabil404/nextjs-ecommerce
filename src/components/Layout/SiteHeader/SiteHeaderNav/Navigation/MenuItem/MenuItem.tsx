@@ -6,7 +6,6 @@ import {
   StyledLink,
   StyledItem
 } from "@/components/Layout/SiteHeader/SiteHeaderNav/Navigation/MenuItem/elements";
-import Link from "next/link";
 import {useRouter} from "next/router";
 import DropDown from "@/components/Layout/SiteHeader/SiteHeaderNav/Navigation/MenuItem/DropDown";
 import {ListItemIcon, Typography} from "@mui/material";
@@ -29,9 +28,16 @@ function MenuItem({items, level}: MenuItemProps) {
       {
         level === 0 ? (
           <>
-            <Link href={items.url || ''}>
-              <NavigationTitle $active={router.pathname === items.url}>{items.title}</NavigationTitle>
-            </Link>
+            {
+              items.url ? (
+                <StyledLink href={items.url || ''}>
+                  <NavigationTitle $active={router.pathname === items.url}>{items.title}</NavigationTitle>
+                </StyledLink>
+              ) : (
+                <NavigationTitle $active={router.pathname === items.url}>{items.title}</NavigationTitle>
+              )
+            }
+
             {
               hasChild && (<DropDown subMenu={items.children || []} dropdown={dropdown} level={level}/>)
             }

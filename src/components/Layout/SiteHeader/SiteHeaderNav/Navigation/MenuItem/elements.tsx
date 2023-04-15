@@ -1,13 +1,13 @@
 import {ListItem, styled, Typography} from "@mui/material";
+import Link from "next/link";
 import {NAVBAR_HEIGHT} from "@/common/constants";
 import {brown} from "@mui/material/colors";
 import ListItemButton from "@mui/material/ListItemButton";
-import Link from "next/link";
 
 export const StyledList = styled(ListItem)`
   && {
     position: relative;
-    padding: 0;
+    padding: 0 5px 0 0;
   }
 `
 export const NavigationTitle = styled(Typography, {
@@ -20,6 +20,8 @@ export const NavigationTitle = styled(Typography, {
     background: ${props => props.$active ? brown[400] : 'inherit'};
     padding: 0 1rem;
     border-radius: 2px;
+    text-align: center;
+    width: 100%;
 
     &:hover {
       background: ${brown[400]};
