@@ -31,7 +31,7 @@ function NavigationItem({data, mappedNavigationData}: NavigationItemProps) {
                 <StyledIcon as={icon}/>
               </StyledListItemIcon>
             )}
-            <StyledListItemText>{title}</StyledListItemText>
+            <StyledListItemText $level={!icon ? level : 0}>{title}</StyledListItemText>
             <StyledListItemIcon $isOpen={isItemOpen}>
               {isItemOpen ? <ExpandMore/> : <ChevronRight/>}
             </StyledListItemIcon>

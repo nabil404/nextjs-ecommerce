@@ -5,9 +5,10 @@ import {
   StyledToolbar
 } from "@/components/Layout/SiteHeader/SiteHeaderNav/elements";
 import {FavoriteBorder, ShoppingCart, Person2Outlined} from "@mui/icons-material";
-import {Container, Typography, Grid} from "@mui/material";
+import {Container, Grid} from "@mui/material";
 import {useAppDispatch} from "@/store";
 import {setCartStateAction} from "@/store/features/layout/slice";
+import Navigation from "@/components/Layout/SiteHeader/SiteHeaderNav/Navigation";
 
 function SiteHeaderNav() {
   const dispatch = useAppDispatch()
@@ -20,10 +21,7 @@ function SiteHeaderNav() {
     <StyledAppbar position="static">
       <Container>
         <StyledToolbar>
-          <Typography variant="h6">
-            Shop by Category
-          </Typography>
-          <Grid sx={{flexGrow: 1}}></Grid>
+          <Grid flexGrow={1}><Navigation/></Grid>
           <Grid display={'flex'} gap={1}>
             <StyledIconButton size="large">
               <StyledBadge badgeContent={4}>
