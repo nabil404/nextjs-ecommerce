@@ -1,4 +1,4 @@
-import {Typography, Badge} from "@mui/material";
+import {Typography} from "@mui/material";
 import {StyledAppbar, StyledBadge, StyledIconButton, StyledToolbar} from "@/components/Layout/MobileTopbar/elements";
 import {Menu, ShoppingCart, Search} from '@mui/icons-material'
 import {useAppDispatch} from "@/store";
@@ -19,7 +19,7 @@ function MobileTopbar() {
   }
 
   return (
-    <StyledAppbar position="static">
+    <StyledAppbar position="fixed">
       <StyledToolbar>
         <StyledIconButton size="large" sx={{mr: 2}} onClick={menuButtonClickHandler}>
           <Menu/>
