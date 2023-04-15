@@ -1,11 +1,10 @@
 import {useSelector} from "react-redux";
-import {Close, Search} from "@mui/icons-material";
-import {InputAdornment} from '@mui/material'
+import {Close} from "@mui/icons-material";
 import {selectIsSearchOpen} from "@/store/features/layout/selectors";
 import {StyledDrawer, StyledIconButton, DrawerContainer} from "@/components/Layout/SearchDrawer/elements";
 import {useAppDispatch} from "@/store";
 import {setSearchStateAction} from "@/store/features/layout/slice";
-import {StyledTextField} from "@/common/elements";
+import Search from "@/components/Layout/Search";
 
 function SearchDrawer() {
   const dispatch = useAppDispatch()
@@ -18,17 +17,7 @@ function SearchDrawer() {
   return (
     <StyledDrawer open={isSearchOpen} onClose={closeButtonClickHandler} anchor={'top'}>
       <DrawerContainer>
-        <StyledTextField
-          fullWidth
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position="start">
-                <Search/>
-              </InputAdornment>
-            ),
-          }}
-          placeholder={'Search for products...'}
-        />
+        <Search/>
         <StyledIconButton onClick={closeButtonClickHandler}>
           <Close/>
         </StyledIconButton>
