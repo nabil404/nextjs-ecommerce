@@ -13,7 +13,7 @@ import {
 
 function NavigationItem({data, mappedNavigationData}: NavigationItemProps) {
   const [isItemOpen, setIsItemOpen] = useState(false)
-  const {id, title, children, url, disabled, icon} = data
+  const {id, title, children, url, icon} = data
   const hasChild = !!children?.length
 
   const level = useMemo(() => mappedNavigationData ? (url ? mappedNavigationData[url] : mappedNavigationData[id]).level : 0, [id, mappedNavigationData, url])
