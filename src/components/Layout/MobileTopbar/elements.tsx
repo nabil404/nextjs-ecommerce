@@ -1,9 +1,11 @@
 import {AppBar, Badge, IconButton, styled, Toolbar} from '@mui/material'
 import {brown} from "@mui/material/colors";
 import {blue} from "@mui/material/colors";
+import {NAVBAR_HEIGHT} from "@/common/constants";
 
 export const StyledAppbar = styled(AppBar)`
   && {
+    height: ${NAVBAR_HEIGHT}px;
     background: ${brown["700"]};
     box-shadow: none;
   }

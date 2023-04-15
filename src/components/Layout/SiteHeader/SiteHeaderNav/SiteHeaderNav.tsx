@@ -19,7 +19,7 @@ function SiteHeaderNav() {
   }
 
   return (
-    <StyledAppbar position="static">
+    <StyledAppbar position="sticky">
       <StyledContainer>
         <StyledToolbar>
           <Grid flexGrow={1}><Navigation/></Grid>

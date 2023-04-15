@@ -9,7 +9,9 @@ export const DropDownList = styled(List, {
   left: ${props => props.$level > 1 ? '100%' : 'auto'};
   min-width: 15rem;
   border-radius: 2px;
-  box-shadow: ${props=>props.theme.shadows[1]};
+  box-shadow: ${props => props.theme.shadows[1]};
   display: ${props => props.$show ? 'block' : 'none'};
+  background: ${props => props.theme.palette.common.white};
+  z-index: ${props => props.theme.zIndex.drawer};
 `
 

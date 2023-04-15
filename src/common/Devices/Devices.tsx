@@ -25,3 +25,13 @@ export const DesktopOrTablet = ({children}: PropsWithChildren) => {
   if (width >= WindowSize.MOBILE) return <>{children}</>
   return <></>
 }
+
+export const useMobileSize = () => {
+  const {width} = useWindowSize()
+  return width <= WindowSize.MOBILE;
+}
+
+export const useDesktopOrTabletSize = () => {
+  const {width} = useWindowSize()
+  return width >= WindowSize.MOBILE;
+}
