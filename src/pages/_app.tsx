@@ -1,16 +1,20 @@
 import '@/styles/globals.css'
 import type {AppProps} from 'next/app'
-import CommonInfrastructure from "@/components/CommonInfrastructure"
+import {Provider} from "react-redux";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import CommonInfrastructure from "@/components/CommonInfrastructure"
 import {wrapper} from "@/store";
 
-function App({Component, pageProps}: AppProps) {
+function App({Component, ...rest}: AppProps) {
+  const {store, props} = wrapper.useWrappedStore(rest);
   return (
-    <CommonInfrastructure>
-      <Component {...pageProps} />
-    </CommonInfrastructure>
+    <Provider store={store}>
+      <CommonInfrastructure>
+        <Component {...props.pageProps} />
+      </CommonInfrastructure>
+    </Provider>
   )
 }
 
-export default wrapper.withRedux(App);
+export default App

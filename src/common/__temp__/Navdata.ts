@@ -12,49 +12,23 @@ export const navData: NavigationData[] = [
     title: 'Categories',
     children: [
       {
-        id: 'category-1',
-        title: 'Category 1',
+        id: 'electronics',
+        title: 'Electronics',
         children: [],
       },
       {
-        id: 'category-2',
-        title: 'Category 2',
+        id: 'jewelery',
+        title: 'Jewelery',
         children: [],
       },
       {
-        id: 'category-3',
-        title: 'Category 3',
+        id: 'men\'s clothing',
+        title: 'Men\'s clothing',
         children: [],
       },
       {
-        id: 'category-4',
-        title: 'Category 4',
-        children: [],
-      }
-    ]
-  },
-  {
-    id: 'brand',
-    title: 'Brands',
-    children: [
-      {
-        id: 'brand-1',
-        title: 'Brand 1',
-        children: [],
-      },
-      {
-        id: 'brand-2',
-        title: 'Brand 2',
-        children: [],
-      },
-      {
-        id: 'brand-3',
-        title: 'Brand 3',
-        children: [],
-      },
-      {
-        id: 'brand-4',
-        title: 'Brand 4',
+        id: 'women\'s clothing',
+        title: 'Women\'s clothing',
         children: [],
       }
     ]

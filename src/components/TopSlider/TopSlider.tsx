@@ -1,24 +1,28 @@
 import Carousel from "@/components/Carousel";
-import Image from "next/image";
-import {SliderWrapper} from "@/components/TopSlider/elements";
 import {Settings} from "react-slick";
+import {Grid} from "@mui/material";
+import Banner from "@/components/Banner";
+import {BannerData} from "@/common/__temp__/BannerData";
 
 function TopSlider() {
 
   const settings: Settings = {
     autoplay: false,
-    autoplaySpeed: 3000
+    autoplaySpeed: 3000,
   }
 
   return (
-    <SliderWrapper>
+    <Grid>
       <Carousel settings={settings}>
-        <Image src={'https://fakeimg.pl/800x400/'} alt={'demo-1'} width={800} height={400}/>
-        <Image src={'https://fakeimg.pl/800x400/'} alt={'demo-1'} width={800} height={400}/>
-        <Image src={'https://fakeimg.pl/800x400/'} alt={'demo-1'} width={800} height={400}/>
-        <Image src={'https://fakeimg.pl/800x400/'} alt={'demo-1'} width={800} height={400}/>
+        {BannerData.map((data, index) =>
+          <Banner
+            key={index}
+            content={data.content}
+            image={data.image}
+            background={data.background}
+          />)}
       </Carousel>
-    </SliderWrapper>
+    </Grid>
   )
 }
 
