@@ -1,4 +1,3 @@
-import {Stack, Typography} from "@mui/material";
 import {StyledContainer, StyledHeader, StyledNumber} from "@/components/Layout/CustomerService/elements";
 
 function CustomerService() {
